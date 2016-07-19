@@ -1,0 +1,14 @@
+prefix=/opt/rpi/sysroot/usr/local/Qt-rasp2-5.6.0-rc1
+exec_prefix=${prefix}
+libdir=/usr/local/Qt-rasp2-5.6.0-rc1/lib
+includedir=/usr/local/Qt-rasp2-5.6.0-rc1/include
+
+
+Name: Qt5 Qml
+Description: Qt Qml module
+Version: 5.6.0
+Libs: -L${libdir} -lQt5Qml 
+Libs.private: -L/opt/rpi/sysroot/home/pi/qtdeps/lib -L/usr/local/Qt-rasp2-5.6.0-rc1/lib -lQt5Network -lQt5Core -lpthread -lrt  
+Cflags: -I${includedir}/QtQml -I${includedir}
+Requires: Qt5Core Qt5Network
+
